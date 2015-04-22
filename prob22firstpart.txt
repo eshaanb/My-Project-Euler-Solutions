@@ -1,0 +1,36 @@
+>>> f = open('/users/eshaan/desktop/names.txt', 'r')
+>>> content = f.readlines()
+>>> contentArray = content.split(',')
+
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    contentArray = content.split(',')
+AttributeError: 'list' object has no attribute 'split'
+>>> type(content)
+<type 'list'>
+>>> contentArray = content[0].split(',')
+>>> contentArray[0]
+'"MARY"'
+>>> for idx, name in enumerate(contentArray):
+	contentArray[idx] = name.replace
+KeyboardInterrupt
+>>> "aaaaa".replace("a", "b")
+'bbbbb'
+>>> for idx, name in enumerate(contentArray):
+	contentArray[idx] = name.replace('"', '')
+
+	
+>>> contentArray[0]
+'MARY'
+>>> sortedFile = open('/users/eshaan/desktop/sorted.txt', 'w')
+>>> contentArray = sorted(contentArray)
+>>> contentArray[0]
+'AARON'
+>>> contentArray[1]
+'ABBEY'
+>>> for name in contentArray:
+	sortedFile.write(name+'\n')
+
+	
+>>> sortedFile.close()
+>>> 
